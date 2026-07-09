@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+   url      = env("DATABASE_URL")
+}
+
+model Student {
+  id              Int                 @id @default(autoincrement())
+  studentId       String              @unique
+  name            String
+  marks           Int
+  category        Category
+  applicationDate DateTime
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+  allocation      Allocation?
+  preferences     StudentPreference[]
+}
+
+model Course {
+  id           Int                 @id @default(autoincrement())
+  courseCode   String              @unique
+  courseName   String
+  totalSeats   Int
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+  allocations  Allocation[]
+  reservations CourseReservation[]
+  preferences  StudentPreference[]
+}
+
+model StudentPreference {
+  id        Int     @id @default(autoincrement())
+  priority  Int
+  studentId Int
+  courseId  Int
+  course    Course  @relation(fields: [courseId], references: [id])
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  @@unique([studentId, priority])
+  @@unique([studentId, courseId])
+}
+
+model CourseReservation {
+  id       Int      @id @default(autoincrement())
+  category Category
+  seats    Int
+  courseId Int
+  course   Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+
+  @@unique([courseId, category])
+}
+
+model Allocation {
+  id                Int      @id @default(autoincrement())
+  studentId         Int      @unique
+  courseId          Int
+  allocatedPriority Int
+  allocatedAt       DateTime @default(now())
+  course            Course   @relation(fields: [courseId], references: [id])
+  student           Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+}
+
+enum Category {
+  GENERAL
+  OBC
+  SC
+  ST
+}
