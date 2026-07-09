@@ -1,3 +1,9 @@
+# Student Course Allocation System
+
+## GitHub Repository
+
+https://github.com/naveenkumar-prog/student-course-allocation-task
+
 # 🎓 Student Course Allocation System
 
 A full-stack web application for managing student admissions and course allocation based on **merit, reservation policies, and student preferences**. The system automates the allocation process and provides an AI-powered assistant for querying admission data.
