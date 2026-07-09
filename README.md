@@ -257,15 +257,15 @@ The AI Assistant receives the latest database information and answers user quest
 Example Questions
 
 ```
-How many students are allocated?
+How many students were allocated to each course?
 
-Who got Computer Science?
+Which students did not receive their first preference?
 
 List all courses.
 
-Show reservation details.
+Which course had the highest rejection rate?
 
-Who scored the highest marks?
+Show category-wise allocation summary.
 ```
 
 If the requested information does not exist, the assistant responds accordingly.
@@ -288,15 +288,34 @@ Dashboard displays:
 
 # 📸 Screenshots
 
-Add screenshots here.
-
 - Dashboard
+
+  <img width="1338" height="686" alt="Dashboard-page" src="https://github.com/user-attachments/assets/154276ee-e552-405c-b557-86d52a05d98a" />
+
 - Students
+
+  <img width="1366" height="714" alt="Students-page" src="https://github.com/user-attachments/assets/9fef845d-a6d5-445c-90d1-7e7ff8ad3e75" />
+
 - Courses
+
+  <img width="1350" height="691" alt="Courses-page" src="https://github.com/user-attachments/assets/f0b5bbbb-8b3a-40f1-98cd-7faa7e137102" />
+
 - Preferences
+
+- <img width="1319" height="672" alt="Preferences-page" src="https://github.com/user-attachments/assets/64251bdd-37cd-4563-a6dd-500d780a676e" />
+
 - Reservations
+
+- <img width="1348" height="670" alt="Reservation-page" src="https://github.com/user-attachments/assets/7e289166-4909-46d5-b543-f0cef1a0aab7" />
+
 - Allocation
+
+- <img width="1355" height="664" alt="Allocation-page" src="https://github.com/user-attachments/assets/03743641-2275-42ea-9cab-4f4407c20436" />
+
 - AI Assistant
+
+- <img width="1366" height="680" alt="AI-page" src="https://github.com/user-attachments/assets/48b2e83d-857b-42e9-ac7f-ff39cd125f94" />
+
 
 ---
 
